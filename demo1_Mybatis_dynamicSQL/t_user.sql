@@ -1,0 +1,15 @@
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (1, 'user257', 'E10ADC3949BA59ABBE56E057F20F883E', 2);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (2, 'usertest', 'E10ADC3949BA59ABBE56E057F20F883E', 2);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (3, 'user1', '81DC9BDB52D04DC20036DBD8313ED055', 2);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (10, '李四', '66666666', 2);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (11, '文理学生', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (12, '文理学生2', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (13, '文理学生3', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (14, '文理学生5', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (15, '文理学生6', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (16, '文理学生7', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (17, '文理学生8', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (18, '文理学生10', '12345678', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (21, '彭于晏', 'root', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (25, '彭于晏1', 'root', 1);
+INSERT INTO `t_user`(`user_id`, `user_name`, `user_pwd`, `user_type`) VALUES (29, '彭于晏222', 'root', 2);

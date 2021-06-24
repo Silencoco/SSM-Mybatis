@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.laj.dao.UserDao">
+
+<!--    当实体类属性和数据库列名不同时-->
+<!--    配置查询结果的列明与实体类的属性名的对应关系
+注意之后在select查询中添加resultMap="userMap" 此方法增加开发效率但降低运行效率，
+方法二直接在sql语句中改-->
+<!--    <resultMap id="userMap" type="com.laj.domain.User">-->
+<!--&lt;!&ndash;        主键字段的对应&ndash;&gt;-->
+<!--        <id property="user_id" column="user_id" ></id>-->
+<!--&lt;!&ndash;        非主键字段的对应&ndash;&gt;-->
+<!--        <result property="user_name" column="user_name"></result>-->
+<!--        <result property="user_pwd" column="user_pwd"></result>-->
+<!--        <result property="user_type" column="user_type"></result>-->
+<!--    </resultMap>-->
+
+    <!--    配置查询所有-->
+    <select id="findAll" resultType="com.laj.domain.User">
+        select  * from t_user
+    </select>
+<!--    保存-->
+    <insert id="saveUser" parameterType="com.laj.domain.User">
+        insert into t_user(user_name,user_pwd,user_type) values (#{user_name},#{user_pwd},#{user_type});
+    </insert>
+<!--    更新-->
+    <update id="updateUser" parameterType="com.laj.domain.User">
+        update t_user set user_name=#{user_name},user_pwd=#{user_pwd},user_type=#{user_type} where user_id=#{user_id};
+    </update>
+<!--    删除-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from t_user where user_id = #{user_id};
+--         此处的uid可以随便写，因为根据id删除，只有一个参数
+    </delete>
+<!--    增加-->
+    <insert id="insertUser" parameterType="com.laj.domain.User">
+        insert into t_user(user_name,user_pwd,user_type) values (#{user_name},#{user_pwd},#{user_type});
+    </insert>
+<!--    根据id查询用户-->
+    <select id="findById" parameterType="INT" resultType="com.laj.domain.User">
+        select * from t_user where user_id=#{user_id};
+    </select>
+<!--    根据名称模糊查询-->
+    <select id="findByName" parameterType="string" resultType="com.laj.domain.User">
+        select * from t_user where user_name like #{user_name};
+    </select>
+<!--    获取用户总记录条数-->
+    <select id="findTotal" resultType="int">
+        select count(user_id) from t_user;
+    </select>
+<!--&lt;!&ndash;    根据QueryVo的条件查询用户&ndash;&gt;-->
+<!--    <select id="findUserByVo" parameterType="com.laj.domain.QueryVo" resultType="com.laj.domain.User">-->
+<!--        select * from t_user where user_name like #{user.user_name};-->
+<!--    </select>-->
+
+</mapper>
